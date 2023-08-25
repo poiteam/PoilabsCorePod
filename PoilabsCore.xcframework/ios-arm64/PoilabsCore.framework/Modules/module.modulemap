@@ -1,0 +1,6 @@
+framework module PoilabsCore {
+  umbrella header "PoilabsCore.h"
+
+  export *
+  module * { export * }
+}
