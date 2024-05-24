@@ -19,6 +19,8 @@
 - (NSArray<NSString *> *)sortNodesByDistance:(NSString *)startNode pois:(NSArray<NSString *> *)poiIds;
 - (void)setFloorChangeMethods:(NSArray<NSString *> *)floorChangeMethods;
 - (void)removeSegment:(NSString *)fromNodeId to:(NSString *)endNodeId;
+- (void)setRouteStepTypes:(NSArray<NSString *> *)pointTypes;
+- (NSArray<PLNRoute *> *)getRouteForMultiplePoints:(NSArray<NSString *> *)pointIds from:(NSString *)startPoint;
 @end
 
 

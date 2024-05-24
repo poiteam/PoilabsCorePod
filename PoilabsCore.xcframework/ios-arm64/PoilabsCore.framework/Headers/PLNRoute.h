@@ -10,14 +10,15 @@
 #define PLNRoute_h
 
 #import <Foundation/Foundation.h>
+#import <PoilabsCore/PLNStep.h>
 
 @interface PLNRoute : NSObject
 
-- (id)initWithSteps:(NSArray<NSArray<NSString *> *> *)routeSteps andLength:(double) length;
+- (id)initWithSteps:(NSArray<PLNStep *> *)routeSteps andLength:(double) length;
 
-@property (nonatomic, readonly) NSArray<NSArray<NSString *> *> *steps;
+@property(strong, nonatomic) NSArray<PLNStep *> *steps;
 
-@property (nonatomic, readonly) double length;
+@property(assign, nonatomic) double length;
 
 - (NSString *)startingNodeId;
 
