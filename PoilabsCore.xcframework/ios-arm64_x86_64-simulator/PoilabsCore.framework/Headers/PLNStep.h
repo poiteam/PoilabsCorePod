@@ -11,7 +11,13 @@
 
 typedef NS_ENUM(NSInteger, PLNStepType) {
     PLNStepTypeLeft,
+    PLNStepTypeLeftAt,
+    PLNStepTypeSlightlyLeft,
+    PLNStepTypeSlightlyLeftAt,
     PLNStepTypeRight,
+    PLNStepTypeRightAT,
+    PLNStepTypeSlightlyRight,
+    PLNStepTypeSlightlyRightAt,
     PLNStepTypeStraight,
     PLNStepTypeUp,
     PLNStepTypeUpOne,
@@ -22,7 +28,9 @@ typedef NS_ENUM(NSInteger, PLNStepType) {
     PLNStepTypeDownZeroMeter,
     PLNStepTypeDownZeroMeterOne,
     PLNStepTypeArrived,
-    PLNStepTypeBuildingPass
+    PLNStepTypeBuildingPass,
+    PLNStepTypeBuildingPassZeroMeter,
+    PLNStepTypeArrivedAfterElevator
 };
 
 @interface PLNStep : NSObject

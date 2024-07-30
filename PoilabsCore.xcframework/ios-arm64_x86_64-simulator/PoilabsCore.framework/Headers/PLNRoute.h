@@ -14,7 +14,7 @@
 
 @interface PLNRoute : NSObject
 
-- (id)initWithSteps:(NSArray<PLNStep *> *)routeSteps andLength:(double) length;
+- (id)initWithSteps:(NSArray<PLNStep *> *)routeSteps andLength:(double)length targetDirection:(int)direction;
 
 @property(strong, nonatomic) NSArray<PLNStep *> *steps;
 
@@ -23,6 +23,8 @@
 - (NSString *)startingNodeId;
 
 - (NSString *)endingNodeId;
+
+@property(assign, nonatomic) int targetDirection;
 
 - (int)countOfSteps;
 

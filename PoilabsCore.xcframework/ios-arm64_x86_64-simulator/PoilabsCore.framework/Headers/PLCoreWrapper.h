@@ -11,8 +11,19 @@
 
 #import <Foundation/Foundation.h>
 #import <PoilabsCore/PLNRoute.h>
+#import <CoreLocation/CoreLocation.h>
+
+@protocol PLCoreDelegate <NSObject>
+
+-(void)didStepUpdateForIndex:(int)stepIndex withDistance:(int)distance toDirection:(int)direction;
+-(void)isOnStepChangeForIndex:(int)stepIndex forStepType:(PLNStepType)stepType;
+
+@end
 
 @interface PLCoreWrapper : NSObject
+
+@property(strong, nonatomic) id<PLCoreDelegate> delegate;
+
 -(void)createGraph:(NSArray<NSDictionary *> *)poiDataArray;
 - (PLNRoute *)findShortestPathFrom:(NSString *)startNode to:(NSString *)endNode;
 - (NSString *)findNearestPointWithType:(NSString *)pointType from:(NSString *)startNodeId;
@@ -21,6 +32,12 @@
 - (void)removeSegment:(NSString *)fromNodeId to:(NSString *)endNodeId;
 - (void)setRouteStepTypes:(NSArray<NSString *> *)pointTypes;
 - (NSArray<PLNRoute *> *)getRouteForMultiplePoints:(NSArray<NSString *> *)pointIds from:(NSString *)startPoint;
+- (void)updateLocationFor:(CLLocationCoordinate2D)coordinate andHeading:(double)heading;
+-(NSArray<PLNStep *> *)getRemainingStepsFrom:(CLLocationCoordinate2D)coordinate;
+- (void)setStepUpdateDistance:(int)distance;
+- (void)setConversionFactor:(double)conversionFactor;
+
+
 @end
 
 
