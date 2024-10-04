@@ -15,8 +15,8 @@
 
 @protocol PLCoreDelegate <NSObject>
 
--(void)didStepUpdateForIndex:(int)stepIndex withDistance:(int)distance toDirection:(int)direction;
--(void)isOnStepChangeForIndex:(int)stepIndex forStepType:(PLNStepType)stepType;
+-(void)didStepUpdateForRouteIndex:(int)routeIndex stepIndex:(int)stepIndex withDistance:(int)distance toDirection:(int)direction;
+-(void)isOnStepChangeForRouteIndex:(int)routeIndex stepIndex:(int)stepIndex forStepType:(PLNStepType)stepType;
 
 @end
 
