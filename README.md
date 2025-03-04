@@ -1,5 +1,3 @@
-
-
 # PoilabsCore iOS Framework
 
 ## Overview
@@ -67,7 +65,7 @@ https://github.com/poiteam/PoilabsCorePod.git
 
 ## License
 
-Distributed under the MIT License.
+Proprietary - All rights reserved by Poilabs. This software is licensed only to authorized users.
 
 ## Contact
 
