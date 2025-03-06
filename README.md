@@ -11,7 +11,7 @@ PoilabsCore is an iOS framework that provides indoor navigation and routing func
 Add the following line to your Podfile:
 
 ````ruby
-pod 'PoilabsCore', '~> 1.0.11'
+pod 'PoilabsCore', '~> 1.0.12'
 ````
 
 Then run in terminal:
@@ -75,7 +75,7 @@ For technical support and inquiries:
 
 ## Version History
 
-Current version: 1.0.11
+Current version: 1.0.12
 
 ---
 
