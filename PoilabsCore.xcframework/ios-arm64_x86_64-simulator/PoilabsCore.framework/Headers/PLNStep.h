@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, PLNStepType) {
     PLNStepTypeDownZeroMeter,
     PLNStepTypeDownZeroMeterOne,
     PLNStepTypeArrived,
+    PLNStepTypeArrivedZeroMeter,
     PLNStepTypeBuildingPass,
     PLNStepTypeBuildingPassZeroMeter,
     PLNStepTypeArrivedAfterElevator

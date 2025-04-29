@@ -30,13 +30,17 @@
 - (NSArray<NSString *> *)sortNodesByDistance:(NSString *)startNode pois:(NSArray<NSString *> *)poiIds;
 - (void)setFloorChangeMethods:(NSArray<NSString *> *)floorChangeMethods;
 - (void)removeSegment:(NSString *)fromNodeId to:(NSString *)endNodeId;
+- (void)clearRemovedSegments;
 - (void)setRouteStepTypes:(NSArray<NSString *> *)pointTypes;
 - (NSArray<PLNRoute *> *)getRouteForMultiplePoints:(NSArray<NSString *> *)pointIds from:(NSString *)startPoint;
 - (void)updateLocationFor:(CLLocationCoordinate2D)coordinate andHeading:(double)heading;
 -(NSArray<PLNStep *> *)getRemainingStepsFrom:(CLLocationCoordinate2D)coordinate;
 - (void)setStepUpdateDistance:(int)distance;
 - (void)setConversionFactor:(double)conversionFactor;
-
+- (BOOL)isThereAlternativeRouteWithoutSegmentFrom:(NSString *)startNodeId
+                                              to:(NSString *)endNodeId
+                                removingSegmentFrom:(NSString *)removedSegmentStart
+                                                to:(NSString *)removedSegmentEnd;
 
 @end
 

@@ -7,7 +7,7 @@ s.name = "PoilabsCore"
 s.summary = "PoilabsCore"
 
 #2
-s.version = "1.0.12"
+s.version = "1.0.15"
 
 # 3
 s.license = { :type => "Proprietary", :file => "LICENSE" }
